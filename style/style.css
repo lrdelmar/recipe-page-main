@@ -59,18 +59,136 @@ h6 {
   text-wrap: balance;
 }
 
+/* End of reset */
+
+@font-face {
+  font-family: "Outfit";
+  src: local("Outfit"),
+    url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: local("Young Serif"),
+    url("../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+body {
+  max-width: 90rem;
+  height: 100vh;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.875rem;
+  display: grid;
+  margin: auto;
+  max-width: 39rem;
+  gap: 1rem;
+  padding: 2rem;
+}
+
 h2 {
   color: hsl(332, 51%, 32%);
+  font-family: "Outfit";
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
 }
 
 h3 {
   color: hsl(14, 45%, 36%);
+  font-size: 1.5rem;
 }
 
-/* #root,
-#__next {
-  isolation: isolate;
-} */
+h1,
+h3 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+p,
+ul,
+ol,
+table {
+  font-family: "Outfit";
+  font-weight: 400;
+  color: hsl(30, 10%, 34%);
+  font-size: 0.875rem;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+hr {
+  border: 1px solid;
+  border-color: hsl(30, 18%, 87%);
+  margin: 0.8rem 0;
+}
+
+.recipe-description {
+  margin-bottom: 0.875rem;
+}
+
+.recipe-timing {
+  background-color: hsl(330, 100%, 98%);
+  padding: 0.875rem;
+  border-radius: 0.75rem;
+}
+
+.recipe-timing ul {
+  padding-left: 0.5rem;
+  list-style-position: inside;
+  color: hsl(332, 51%, 32%);
+}
+
+.ingredients {
+  list-style: square;
+  padding-left: 0;
+  list-style-position: inside;
+  color: hsl(14, 45%, 36%);
+  text-align: left;
+}
+
+.recipe-timing li,
+.ingredients li {
+  padding-left: 0.5rem;
+  line-height: 2rem;
+  font-size: 0.6rem;
+}
+
+li span {
+  color: hsl(30, 10%, 34%);
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  font-weight: 400;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+  list-style-position: inside;
+  text-indent: -2.2em;
+  padding-left: 2.5em;
+  text-align: left;
+  gap: 0.5rem;
+}
+
+table {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+th {
+  font-weight: 400;
+  padding: 0.5rem 0;
+}
 
 .attribution {
   font-size: 11px;
