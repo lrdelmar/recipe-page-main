@@ -74,7 +74,7 @@ h6 {
 }
 
 body {
-  max-width: 90rem;
+  max-width: 160rem;
   height: 100vh;
 }
 
@@ -82,7 +82,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   border-radius: 0.875rem;
   display: grid;
-  margin: auto;
+  margin: 4rem auto 4rem auto;
   max-width: 39rem;
   gap: 1rem;
   padding: 2rem;
@@ -179,15 +179,26 @@ li span {
 
 table {
   text-align: left;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
 }
 
 tr {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+tr:last-child {
+  border-bottom: none;
 }
 
 th {
   font-weight: 400;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+td {
+  color: hsl(14, 45%, 36%);
 }
 
 .attribution {
@@ -196,4 +207,38 @@ th {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* for screens up to 425px wide */
+@media screen and (max-width: 27rem) {
+  .container {
+    border-radius: 0;
+    padding: 1rem;
+    margin: auto;
+    gap: 0.8rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  ul,
+  ol,
+  table {
+    font-size: 0.8rem;
+  }
+
+  .recipe-timing li,
+  .ingredients li {
+    line-height: 1.5rem;
+  }
 }
